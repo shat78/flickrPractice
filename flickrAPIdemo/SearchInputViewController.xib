@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SearchInputViewController" customModule="flickrAPIdemo" customModuleProvider="target">
+            <connections>
+                <outlet property="perPageInputField" destination="CDv-D6-lcq" id="ikd-ZT-AS8"/>
+                <outlet property="searchBtn" destination="tqC-tc-dIR" id="NyY-ci-Tfk"/>
+                <outlet property="textInputField" destination="89a-vg-gOv" id="9IA-n4-V8e"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="搜尋內容" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="89a-vg-gOv">
+                    <rect key="frame" x="20.5" y="403" width="373" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tqC-tc-dIR">
+                    <rect key="frame" x="20.5" y="523" width="373" height="30"/>
+                    <state key="normal" title="搜尋"/>
+                    <connections>
+                        <action selector="onSearchClicked:" destination="-1" eventType="touchUpInside" id="WAg-58-hIu"/>
+                    </connections>
+                </button>
+                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="每頁顯示數量" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="CDv-D6-lcq">
+                    <rect key="frame" x="20.5" y="463" width="373" height="30"/>
+                    <nil key="textColor"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="89a-vg-gOv" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="6jT-ed-Bcm"/>
+                <constraint firstItem="89a-vg-gOv" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-30" id="GQv-WS-OY0"/>
+                <constraint firstItem="CDv-D6-lcq" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.9" id="QgF-iF-Pho"/>
+                <constraint firstItem="tqC-tc-dIR" firstAttribute="centerX" secondItem="CDv-D6-lcq" secondAttribute="centerX" id="fBb-Xh-Y8P"/>
+                <constraint firstItem="tqC-tc-dIR" firstAttribute="top" secondItem="CDv-D6-lcq" secondAttribute="bottom" constant="30" id="gD3-OX-OA4"/>
+                <constraint firstItem="CDv-D6-lcq" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="oC5-1E-HGY"/>
+                <constraint firstItem="tqC-tc-dIR" firstAttribute="width" secondItem="CDv-D6-lcq" secondAttribute="width" id="poL-xJ-h4f"/>
+                <constraint firstItem="CDv-D6-lcq" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="30" id="sW4-fJ-5cJ"/>
+                <constraint firstItem="89a-vg-gOv" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.9" id="xwO-yB-U5s"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+</document>
